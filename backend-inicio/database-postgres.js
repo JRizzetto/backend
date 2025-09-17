@@ -1,7 +1,7 @@
-import { randomUUID } from "node:crypto";
+import { randomUUID } from "crypto";
 import { sql } from "./db.js";
 
-export class DatabasePostgre {
+export class DatabasePostgres {
   async list(search) {
     let videos;
 
@@ -18,15 +18,15 @@ export class DatabasePostgre {
 
   async create(video) {
     const videoId = randomUUID();
-    const { title,  , duration } = video;
+    const { title, description, duration } = video;
 
     await sql`insert into videos (id, title, description, duration) VALUES (${videoId}, ${title}, ${description}, ${duration})`;
   }
 
   async update(id, video) {
-    const { title, description, duration } = video;
+    const { title, description, duration } = video 
 
-    await sql`update videos set title = ${title}, description = ${description}, duration = ${duration} WHERE id = ${id}`;
+    await sql`update videos set title = ${title}, description = ${description}, duration = ${duration} WHERE id = ${id}`
   }
 
   async delete(id) {
