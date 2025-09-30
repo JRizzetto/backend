@@ -1,8 +1,17 @@
-// import { fixedSum } from "../functions/utils/fixed.js";
-// import { sum } from "../functions/math/sum.js";
+import { readFile } from "node:fs/promises";
 
-// console.log(sum(6, 4));
-// console.log(fixedSum(6, 4));
+async function main() {
+  //   readFile().then().catch().finally;
 
-let soma = 1 + 4;
-console.log(typeof soma);
+  try {
+    const file = await readFile("./src/index.js");
+    console.log(file.toString());
+  } catch (error) {
+    console.log("Não foi possível ler o arquivo");
+  } finally {
+    console.log("Fim do tratamento de erro");
+  }
+
+  console.log("Fim do programa");
+}
+main();
