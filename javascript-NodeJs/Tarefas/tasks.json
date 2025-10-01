@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Estudar JS",
+    "status": "em andamento",
+    "createdAt": "2025-10-01T15:28:28.492Z"
+  },
+  {
+    "name": "Comprar pão",
+    "status": "concluída",
+    "createdAt": "2025-10-01T19:16:04.415Z"
+  },
+  {
+    "name": "Levar o cachorro para passear",
+    "status": "concluída",
+    "createdAt": "2025-10-01T19:16:25.866Z"
+  },
+  {
+    "name": "Entrar no discord Rincko Dev",
+    "status": "em andamento",
+    "createdAt": "2025-10-01T19:16:36.845Z"
+  },
+  {
+    "name": "Aniversário do Cristiano sexta",
+    "status": "cancelada",
+    "createdAt": "2025-10-01T19:16:47.724Z"
+  }
+]
