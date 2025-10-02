@@ -50,7 +50,7 @@ export async function updateTaskMenu(taskName) {
 
       const newTaskName = await text({
         message: "Digite o novo nome da terefa",
-        validade(input) {
+        validate(input) {
           if (taskManager.tasks.has(input)) {
             return "Já existe uma tarefa com este nome";
           }
@@ -81,7 +81,7 @@ export async function updateTaskMenu(taskName) {
       });
 
       if (isCancel(status)) {
-        updateTaskMenu(taskname);
+        updateTaskMenu(taskName);
         return;
       }
 
